@@ -15,10 +15,11 @@ def user_input_features():
     claw_length_cm = st.sidebar.slider('Claw length', 4.3, 7.9, 5.4)
     size_cm = st.sidebar.slider('Sloth body size', 2.0, 4.4, 3.4)
     tail_length_cm = st.sidebar.slider('Tail length', 1.0, 6.9, 1.3)
-    data = {'claw_length_cm': claw_length_cm,
-            'size_cm': size_cm,
-            'tail_length_cm': tail_length_cm}
-    df = pd.DataFrame(data, index[0])
+    data = {'claw_length_cm': [claw_length_cm],
+            'size_cm': [size_cm],
+            'tail_length_cm': [tail_length_cm]
+           }
+    features = pd.DataFrame(data, index[0])
     return features
 
 df = user_input_features()
