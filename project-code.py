@@ -25,7 +25,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-iris = pd.read_csv("https://raw.githubusercontent.com/amirahadlina/Final-Assignment/main/IRIS.csv")
+iris = pd.read_csv("https://raw.githubusercontent.com/amirahadlina/Final-Project-Sloth-Species/main/sloth_data_cleaned.csv")
 X = iris.loc[:,['claw_length','sloth_body_size','tail_length']]
 Y = iris.loc[:,['species']]
 clf = RandomForestClassifier()
