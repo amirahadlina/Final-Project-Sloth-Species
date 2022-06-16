@@ -11,14 +11,12 @@ st.header("This app predicts **Sloth Species** type")
 st.sidebar.header('Please choose these parameters to predict your Sloth!')
 
 def user_input_features():
-    sepal_length = st.sidebar.slider('2.1', 4.3, 7.9, 5.4)
-    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
-    data = {'sepal_length': sepal_length,
-            'sepal_width': sepal_width,
-            'petal_length': petal_length,
-            'petal_width': petal_width}
+    Claw_length = st.sidebar.slider('Claw Length(cm)', 1.50, 12.20, 7.31)
+    Sloth_body_size = st.sidebar.slider('Sloth Body Size(cm)', 45.0, 69.10, 61.8)
+    Tail_length = st.sidebar.slider('Tail Length(cm)', -2.50, 9.50, 4.5)
+    data = {'claw_length': claw_length,
+            'sloth_body_size': sloth_body_size,
+            'tail_length': tail_length}
     features = pd.DataFrame(data, index=[0])
     return features
 
@@ -28,7 +26,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv("https://raw.githubusercontent.com/amirahadlina/Final-Assignment/main/IRIS.csv")
-X = iris.loc[:,['sepal_length','sepal_width','petal_length','petal_width']]
+X = iris.loc[:,['claw_length','sloth_body_size','tail_length']]
 Y = iris.loc[:,['species']]
 clf = RandomForestClassifier()
 clf.fit(X, Y)
@@ -37,7 +35,7 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.table(["setosa", "versicolor", "virginica"])
+st.table(["two_toed", "three_toed"])
 
 
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Iris_%28plant%29.jpg/640px-Iris_%28plant%29.jpg")
