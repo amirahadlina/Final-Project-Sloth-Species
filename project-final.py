@@ -24,6 +24,7 @@ def user_input_features():
     return features
 
 df = user_input_features()
+print(df)
 
 st.subheader('User Input parameters')
 st.write(df)
