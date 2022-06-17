@@ -12,7 +12,7 @@ This app predicts  **Sloth Species** based on your chosen parameters
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    claw_length_cm = st.sidebar.slider("Claw length", 1.75, 12.17, 5.4)
+    claw_length_cm = st.sidebar.slider("Claw length", 1.00, 13.00, 7.31)
     size_cm = st.sidebar.slider("Size", 46.00, 70.00, 68.76)
     tail_length_cm = st.sidebar.slider("Tail length", -3.0, 9.0, 1.1)
     
