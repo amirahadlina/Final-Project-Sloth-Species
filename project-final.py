@@ -27,9 +27,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-sloth = pd.read_csv("https://raw.githubusercontent.com/amirahadlina/Final-Project-Sloth-Species/main/sloth_data_cleaned.csv")
+sloth = pd.read_csv("https://raw.githubusercontent.com/amirahadlina/Final-Project-Sloth-Species/main/sloth_data_cleaned2a.csv")
 X = sloth.loc[:,['claw_length_cm','size_cm','tail_length_cm']]
-Y = sloth.loc[:,['specie']]
+Y = sloth.loc[:,['species']]
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
