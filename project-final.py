@@ -22,7 +22,7 @@ def user_input_features():
     features = pd.DataFrame(data,index[0])
     return features
 
-df = features[:]
+df = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(df)
