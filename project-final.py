@@ -14,7 +14,7 @@ st.sidebar.header('User Input Parameters')
 def user_input_features():
     claw_length_cm = st.sidebar.slider("Claw length", 1.75, 12.17, 5.4)
     size_cm = st.sidebar.slider("Size", 46, 70, 68)
-    tail_length_cm = st.sidebar.slider("Tail length", -3, 9)
+    tail_length_cm = st.sidebar.slider("Tail length", -3.0, 9.0, 1.1)
     
     data = {'claw_length_cm': claw_length_cm,
             'size_cm': size_cm,
