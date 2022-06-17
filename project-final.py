@@ -19,8 +19,8 @@ def user_input_features():
     data = {'claw_length_cm': claw_length_cm,
             'size_cm': size_cm,
             'tail_length_cm': tail_length_cm}
-    user_input_features = pd.DataFrame(data, index[0])
-    return user_input_features
+    features = pd.df(data, index[0])
+    return features
 
 df = user_input_features()
 
