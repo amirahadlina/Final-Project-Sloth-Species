@@ -12,17 +12,14 @@ This app predicts  **Sloth Species** based on your chosen parameters
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    claw_length_cm = st.sidebar.slider("Claw length", 1.00, 13.00, 7.31)
-    size_cm = st.sidebar.slider("Size", 46.00, 70.00, 68.76)
-    tail_length_cm = st.sidebar.slider("Tail length", -3.0, 9.0, 1.1)
-    
+    claw_length_cm = st.sidebar.slider("Claw length (cm)", 1.00, 13.00, 7.31)
+    size_cm = st.sidebar.slider("Size (cm)", 46.00, 70.00, 68.76)
+    tail_length_cm = st.sidebar.slider("Tail length (cm)", -3.0, 9.0, 1.1)
     data = {'claw_length_cm': claw_length_cm,
             'size_cm': size_cm,
             'tail_length_cm': tail_length_cm}
-    features = pd.DataFrame(data,index[0])
+    features = pd.DataFrame(data,index=[0])
     return features
-
-
 input_df = user_input_features()
 
 st.subheader('User Input parameters')
